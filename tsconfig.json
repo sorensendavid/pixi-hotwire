@@ -5,7 +5,14 @@
         "sourceMap": true,
         "target": "es2015",
         "module": "ESNext",
-    
+        "lib": [
+            "DOM",
+            "ES6",
+            "dom.iterable",
+            "scripthost"
+        ],
+        "noEmitOnError": true,
+
         // Rules for your code
         "strict": true,
         "noImplicitAny": true,
@@ -14,6 +21,7 @@
         "noUnusedLocals": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitOverride": true,
+        "forceConsistentCasingInFileNames": true,
 
         // Settings for linking source files
         "moduleResolution": "node",
@@ -26,5 +34,9 @@
     // Folder for your code
     "include": [
         "./src/**/*"
-    ]
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
 }
